@@ -1,0 +1,28 @@
+{
+  "name": "@pbalduino/gerson",
+  "version": "0.0.5",
+  "description": "Abstracts the API handling and authentication management using an OpenAPI document",
+  "keywords": [
+    "openapi",
+    "rest"
+  ],
+  "homepage": "",
+  "bugs": {},
+  "browser": "src/index.js",
+  "scripts": {
+    "test": "nyc mocha"
+  },
+  "repository": {},
+  "author": "Plínio Balduino",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">= 12.0.0"
+  },
+  "engineStrict": true,
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0",
+    "nyc": "^15.1.0"
+  }
+}
