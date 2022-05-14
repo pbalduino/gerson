@@ -1,6 +1,6 @@
 {
   "name": "@pbalduino/gerson",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Abstracts the API handling and authentication management using an OpenAPI document",
   "keywords": [
     "openapi",
@@ -10,9 +10,11 @@
   "bugs": {},
   "browser": "src/index.js",
   "scripts": {
+    "build": "browserify src/index.js -o dist/index.js",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "test": "nyc mocha"
   },
-  "repository": {},
+  "repository": "github:pbalduino/gerson",
   "author": "Plínio Balduino",
   "license": "MIT",
   "private": false,
@@ -21,8 +23,17 @@
   },
   "engineStrict": true,
   "devDependencies": {
+    "@rushstack/eslint-patch": "^1.1.3",
     "chai": "^4.3.6",
+    "eslint": "^8.14.0",
+    "eslint-plugin-mocha": "^10.0.4",
     "mocha": "^10.0.0",
-    "nyc": "^15.1.0"
+    "moxios": "^0.4.0",
+    "nyc": "^15.1.0",
+    "sinon": "^13.0.2",
+    "uniq": "^1.0.1"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
   }
 }
