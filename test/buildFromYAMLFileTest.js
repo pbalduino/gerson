@@ -1,17 +1,7 @@
-const assert = require('assert');
-
-const {
-  expect
-} = require('chai');
-
-const {
-  buildFromYAMLFile,
-  ValidationError,
-} = require("../src/index.js");
-
-const {
-  YAMLException
-} = require('js-yaml');
+const {buildFromYAMLFile, ValidationError} = require("../src/index.js");
+const {expect} = require('chai');
+const {YAMLException} = require('js-yaml');
+// const assert = require('assert');
 
 describe("When testing the descriptor loading", function() {
   describe("Building from a valid YAML file", function() {
