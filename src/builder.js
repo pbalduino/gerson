@@ -73,7 +73,7 @@ const assemble = ({servers, paths}, user_options) => {
         console.error("Error refreshing the token:", err);
       }
 
-      api_accessor.new_tokens();
+      api_accessor.clear_tokens();
     });
   };
 
@@ -122,13 +122,14 @@ const assemble = ({servers, paths}, user_options) => {
         };
 
         if(paths[route][method].security) {
+          console.log(`Using token '${$this.access_token()}' to call '${url}'`)
           headers["Authorization"] = `Bearer ${$this.access_token()}`;
         }
 
         method = method.toUpperCase();
 
         if(options.debug) {
-          console.log(`Requesting [${method} ${url}] with data ${data}`);
+          console.log(`Requesting [${method} ${url}] with data ${JSON.stringify(data)}`);
         }
 
         return axios({

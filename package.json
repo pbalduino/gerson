@@ -1,6 +1,6 @@
 {
   "name": "@pbalduino/gerson",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Abstracts the API handling and authentication management using an OpenAPI document",
   "keywords": [
     "openapi",
@@ -8,6 +8,7 @@
   ],
   "homepage": "",
   "bugs": {},
+  "main": "src/index.js",
   "browser": "src/index.js",
   "scripts": {
     "build": "browserify src/index.js -o dist/index.js",
